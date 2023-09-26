@@ -20,5 +20,5 @@ jobs:
 
       - name: SSH into EC2 and deploy
         run: |
-          ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_PRIVATE_KEY }} daapp.kong@100.24.53.174 "cd / && git pull origin main && go build && systemctl restart Golang-Test"
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@100.24.53.174 "cd / && git pull origin main && go build && systemctl restart Golang-Test"
 
