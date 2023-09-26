@@ -18,6 +18,8 @@ func RouterEngine() *gin.Engine {
 		MaxAge:          1 * time.Minute,
 	}))
 
+	r.GET(`/`, HandlerGetExample)
+
 	Example := r.Group(`Example`)
 	{
 		Example.POST(`/post`, HandlerExample)

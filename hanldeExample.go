@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -19,4 +20,8 @@ func HandlerExample(c *gin.Context) {
 		`Success`: true,
 		`Message`: data,
 	})
+}
+
+func HandlerGetExample(c *gin.Context) {
+	fmt.Println("asd")
 }
