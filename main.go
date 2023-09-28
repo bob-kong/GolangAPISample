@@ -2,7 +2,6 @@ package main
 
 import (
 	"net/http"
-	"os"
 
 	"github.com/joho/godotenv"
 )
@@ -22,11 +21,12 @@ func init() {
 }
 
 func main() {
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "5000"
-	}
-	// test
+	// port := os.Getenv("PORT")
+	// if port == "" {
+	// 	port = "5000"
+	// }
+	// // test
 
-	http.ListenAndServe(":"+port, RouterEngine())
+	// http.ListenAndServe(":"+port, RouterEngine())
+	http.ListenAndServe("", RouterEngine())
 }
