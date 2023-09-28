@@ -25,3 +25,10 @@ func HandlerExample(c *gin.Context) {
 func HandlerGetExample(c *gin.Context) {
 	fmt.Println("asd")
 }
+
+func HandlerGetExample2(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		`Success`: true,
+		`Message`: "YA",
+	})
+}

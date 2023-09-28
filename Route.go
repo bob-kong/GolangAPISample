@@ -20,6 +20,7 @@ func RouterEngine() *gin.Engine {
 	}))
 
 	r.GET(`/`, HandlerGetExample)
+	r.GET(`/get`, HandlerGetExample)
 
 	Example := r.Group(`Example`)
 	{
