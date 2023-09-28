@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      go: 1.x  # Use the Go version you need (e.g., 1.15, 1.16, etc.)
+
+  pre_build:
+    commands:
+      - go mod download  # Download Go module dependencies, if you're using modules
+
+  build:
+    commands:
+      - go build -o golangSample  # Replace "myapp" with your desired binary name
+      - chmod +x golangSample    # Ensure the binary is executable
+
+artifacts:
+  files:
+    - golangSample  # Add any additional files or directories you want to include in the build artifact
