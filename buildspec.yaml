@@ -3,10 +3,11 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      golang: 1.14  # Use the Go version you need (e.g., 1.15, 1.16, etc.)
+      golang: 1.16  # Use the Go version you need (e.g., 1.15, 1.16, etc.)
 
   pre_build:
     commands:
+      - go clean -modcache
       - go mod download  # Download Go module dependencies, if you're using modules
 
   build:
