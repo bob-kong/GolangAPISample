@@ -7,7 +7,6 @@ phases:
 
   pre_build:
     commands:
-      - go clean -modcache
       - go mod download  # Download Go module dependencies, if you're using modules
 
   build:
